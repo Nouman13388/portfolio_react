@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, BookOpen, Award, Github, Linkedin, Mail } from 'lucide-react';
+import { ExternalLink,  Linkedin, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {    const socialLinks = [
         // {
