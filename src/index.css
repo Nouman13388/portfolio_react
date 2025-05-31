@@ -1232,3 +1232,57 @@ button:disabled {
   color: white;
   border-color: var(--sky-blue);
 }
+
+/* Mobile Touch Improvements */
+@media (max-width: 768px) {
+  /* Larger touch targets for better mobile experience */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+  
+  /* Better spacing for mobile */
+  .hero-buttons {
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Improved mobile form elements */
+  .form-group input,
+  .form-group textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+}
+
+/* Additional small screen optimizations */
+@media (max-width: 480px) {
+  /* Stack buttons vertically on very small screens */
+  .hero-buttons {
+    width: 100%;
+  }
+  
+  .hero-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Better mobile download buttons */
+  .download-section > div {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
