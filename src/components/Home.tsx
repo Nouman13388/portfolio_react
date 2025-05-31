@@ -44,18 +44,16 @@ export const Home = (): JSX.Element => {
                                     <div className="depth-frame-14">
                                         <div className="depth-frame-15" />
                                         <div className="depth-frame-16">
-                                            <div className="depth-frame-17">
-                                                <span className="dr-evelyn-reed">Dr. Evelyn Reed</span>
+                                            <div className="depth-frame-17">                                <span className="dr-evelyn-reed">Aqsa Farooq</span>
                                             </div>
                                             <div className="depth-frame-18">
                                                 <span className="graph-theory-mathematician">
-                                                    Mathematician specializing in Graph Theory
+                                                    Mathematics Lecturer specializing in Graph Theory
                                                 </span>
                                             </div>
                                             <div className="depth-frame-19">
                                                 <span className="uc-berkeley-phd">
-                                                    Ph.D. in Mathematics, University of California,
-                                                    Berkeley
+                                                    MS/MPhil in Mathematics, COMSATS University Islamabad
                                                 </span>
                                             </div>
                                         </div>
@@ -65,27 +63,21 @@ export const Home = (): JSX.Element => {
                         </div>
                         <div className="depth-frame-1a">
                             <div className="depth-frame-1b" />
-                            <div className="depth-frame-1c">
-                                <span className="dr-evelyn-reed-1d">
-                                    Dr. Evelyn Reed is a distinguished mathematician with a Ph.D.
-                                    from the University of California, Berkeley. Her research
-                                    primarily focuses on graph theory, combinatorics, network
-                                    science, and their algorithmic applications. With a passion
-                                    for unraveling complex mathematical structures, Dr. Reed has
-                                    made significant contributions to the field, publishing
-                                    numerous articles in top-tier journals and presenting her work
-                                    at international conferences. Her expertise lies in developing
-                                    innovative algorithms and theoretical frameworks to address
-                                    real-world problems across various domains, including social
-                                    networks, transportation systems, and biological networks.
+                            <div className="depth-frame-1c">                                <span className="dr-evelyn-reed-1d">
+                                    Aqsa Farooq is a dedicated Mathematics Lecturer at COMSATS University Islamabad with an MS/MPhil 
+                                    in Mathematics from the same institution. Her research primarily focuses on graph theory, discrete 
+                                    mathematics, and their applications in network analysis. With a passion for mathematical education 
+                                    and research, Aqsa has made significant contributions to the field, including publications on 
+                                    metric dimensions in honeycomb networks and line graphs. Her expertise lies in developing 
+                                    theoretical frameworks for graph structures and applying mathematical concepts to solve 
+                                    real-world problems in network science, combinatorial optimization, and discrete mathematics.
                                 </span>
                             </div>
                             <div className="depth-frame-1e">
                                 <span className="research-focus">Research Focus</span>
                             </div>
-                            <div className="depth-frame-1f">
-                                <span className="research-areas">
-                                    Dr. Reed's research is centered around the following key
+                            <div className="depth-frame-1f">                                <span className="research-areas">
+                                    Aqsa's research is centered around the following key
                                     areas:
                                 </span>
                             </div>
@@ -104,14 +96,42 @@ export const Home = (): JSX.Element => {
                                     <span className="network-science">Network Science</span>
                                 </div>
                             </div>
-                            <div className="depth-frame-26">
-                                <div className="depth-frame-27">
+                            <div className="depth-frame-26">                                <div className="depth-frame-27">
                                     <span className="algorithmic-applications">
-                                        Algorithmic Applications
+                                        Mathematics Education
                                     </span>
                                 </div>
                             </div>
-                            <div className="depth-frame-28" />
+                            <div className="depth-frame-28" />                            <div className="depth-frame-29">
+                                <button 
+                                    className="btn-primary" 
+                                    onClick={() => {
+                                        const cvSection = document.getElementById('cv');
+                                        if (cvSection) {
+                                            cvSection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
+                                    style={{
+                                        padding: '12px 24px',
+                                        fontSize: '16px',
+                                        fontWeight: '600',
+                                        backgroundColor: '#2563eb',
+                                        color: 'white',
+                                        border: 'none',
+                                        borderRadius: '8px',
+                                        cursor: 'pointer',
+                                        transition: 'all 0.3s ease',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '8px',
+                                        margin: '20px auto'
+                                    }}
+                                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#1d4ed8'}
+                                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2563eb'}
+                                >
+                                    📄 View CV
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

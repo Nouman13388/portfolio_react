@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, MapPin, Calendar, Award, GraduationCap, Briefcase, Code } from 'lucide-react';
+import { Download, MapPin, Calendar, Award, GraduationCap, Briefcase, Code, Eye } from 'lucide-react';
 
 const CV: React.FC = () => {    const education = [
         {
@@ -99,11 +99,19 @@ const CV: React.FC = () => {    const education = [
             category: "Teaching & Communication",
             items: ["Curriculum Development", "Academic Writing", "Research Methodology", "Student Mentoring"]
         }
-    ];
+    ];    const handleDownloadCV = () => {
+        // Create a download link for the CV PDF
+        const link = document.createElement('a');
+        link.href = '/Aqsa_Farooq_CV.pdf';
+        link.download = 'Aqsa_Farooq_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
-    const handleDownloadCV = () => {
-        // In a real application, this would download an actual CV file
-        alert('Full CV download functionality would be implemented here');
+    const handlePreviewCV = () => {
+        // Open CV in new tab for preview
+        window.open('/Aqsa_Farooq_CV.pdf', '_blank');
     };
 
     return (
@@ -117,19 +125,23 @@ const CV: React.FC = () => {    const education = [
                     viewport={{ once: true }}
                 >
                     Curriculum Vitae
-                </motion.h2>
-
-                <motion.div
+                </motion.h2>                <motion.div
                     className="download-section"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     viewport={{ once: true }}
                 >
-                    <button className="btn-primary download-btn" onClick={handleDownloadCV}>
-                        <Download size={20} />
-                        Download Full CV
-                    </button>
+                    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <button className="btn-secondary download-btn" onClick={handlePreviewCV}>
+                            <Eye size={20} />
+                            Preview CV
+                        </button>
+                        <button className="btn-primary download-btn" onClick={handleDownloadCV}>
+                            <Download size={20} />
+                            Download CV
+                        </button>
+                    </div>
                 </motion.div>
 
                 <div className="cv-content">

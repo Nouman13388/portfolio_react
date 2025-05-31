@@ -8,11 +8,9 @@ const Hero: React.FC = () => {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
-    };
-
-    const handleDownloadCV = () => {
-        // In a real application, this would link to an actual CV file
-        alert('CV download functionality would be implemented here');
+    };    const handleViewCV = () => {
+        // Navigate to CV section
+        scrollToSection('cv');
     };
 
     return (
@@ -81,10 +79,9 @@ const Hero: React.FC = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                        >
-                            <button
+                        >                            <button
                                 className="btn-primary"
-                                onClick={handleDownloadCV}
+                                onClick={handleViewCV}
                             >
                                 <Download size={20} />
                                 View CV
