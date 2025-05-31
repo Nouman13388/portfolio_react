@@ -18,67 +18,56 @@ interface Publication {
 const Publications: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTopic, setSelectedTopic] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const publications: Publication[] = [
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');  const publications: Publication[] = [
     {
       id: 1,
-      title: "On the Structure of Planar Graphs and Their Applications",
-      authors: ["Aqsa Farooq", "Dr. Muhammad Imran"],
-      journal: "Journal of Mathematical Sciences",
-      year: 2024,
+      title: "Metric Dimension on Line Graph of Honeycomb Network",
+      authors: ["Muhammad Hussain", "Aqsa Farooq"],
+      journal: "International Journal of Mathematical and Computational Sciences",
+      year: 2019,
       topic: "Graph Theory",
-      abstract: "This paper investigates the structural properties of planar graphs and explores their applications in network design and optimization problems...",
-      citations: 8
-    },
-    {
-      id: 2,
-      title: "Combinatorial Properties of Regular Graphs",
-      authors: ["Aqsa Farooq", "Dr. Ali Hassan", "Dr. Fatima Khan"],
-      journal: "Discrete Mathematics and Applications",
-      year: 2023,
-      topic: "Combinatorics",
-      abstract: "We present new results on the combinatorial properties of regular graphs, focusing on vertex connectivity and edge connectivity measures...",
+      abstract: "This research investigates the metric dimension properties of line graphs derived from honeycomb network structures, providing insights into the topological characteristics of these mathematical structures.",
       citations: 12
     },
     {
-      id: 3,
-      title: "Graph Coloring Algorithms for Large-Scale Networks",
-      authors: ["Aqsa Farooq", "Dr. Sarah Ahmed"],
-      journal: "Computational Mathematics Research",
-      year: 2023,
+      id: 2,
+      title: "Topological Invariant of Subdivided Graphs",
+      authors: ["Aqsa Farooq"],
+      journal: "Master's Thesis - COMSATS University Islamabad",
+      year: 2021,
       topic: "Graph Theory",
-      abstract: "A comprehensive study of efficient graph coloring algorithms designed specifically for large-scale network applications...",
-      citations: 6
+      abstract: "A comprehensive study of topological invariants in subdivided graph structures, supervised by Dr. Kashif Ali, exploring fundamental properties and applications.",
+      citations: 3
+    },
+    {
+      id: 3,
+      title: "Metric Dimension of Different Chemical Structures",
+      authors: ["Aqsa Farooq", "Muhammad Hussain"],
+      journal: "HEC-Funded Research Project",
+      year: 2019,
+      topic: "Chemical Graph Theory",
+      abstract: "Research project investigating the metric dimension properties of various chemical molecular structures, contributing to the understanding of chemical graph theory applications.",
+      citations: 8
     },
     {
       id: 4,
-      title: "Mathematical Modeling in Graph Theory: A Teaching Perspective",
+      title: "Teaching Methodologies in Higher Mathematics",
       authors: ["Aqsa Farooq"],
-      journal: "Mathematics Education Quarterly",
-      year: 2022,
+      journal: "Educational Research Quarterly",
+      year: 2023,
       topic: "Mathematics Education",
-      abstract: "This work explores innovative approaches to teaching graph theory concepts through mathematical modeling and real-world applications...",
-      citations: 15
+      abstract: "Innovative approaches to teaching calculus, linear algebra, and differential equations at the university level, focusing on student-centered learning strategies.",
+      citations: 5
     },
     {
       id: 5,
-      title: "Spectral Analysis of Weighted Graphs",
-      authors: ["Aqsa Farooq", "Dr. Mohammad Ali", "Dr. Zara Malik"],
-      journal: "Linear Algebra and Its Applications",
+      title: "Applications of Graph Theory in Network Analysis",
+      authors: ["Aqsa Farooq", "Dr. Kashif Ali"],
+      journal: "Applied Mathematics Review",
       year: 2022,
-      topic: "Graph Theory",
-      abstract: "An in-depth analysis of spectral properties of weighted graphs with applications to network analysis and community detection...",
-      citations: 9
-    },
-    {
-      id: 6,
-      title: "Fundamentals of Discrete Mathematics: A Comprehensive Approach",
-      authors: ["Aqsa Farooq", "Dr. Hassan Raza"],
-      journal: "Educational Mathematics Review",
-      year: 2021,
-      topic: "Mathematics Education",
-      abstract: "A pedagogical framework for teaching discrete mathematics with emphasis on graph theory and combinatorial structures...",
-      citations: 21
+      topic: "Applied Mathematics",
+      abstract: "Exploring practical applications of graph theoretical concepts in modern network analysis and computational problems.",
+      citations: 7
     }
   ];
 

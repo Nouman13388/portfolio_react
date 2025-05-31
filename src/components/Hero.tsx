@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                     >                        <h1>Aqsa Farooq</h1>
                         <h2 className="hero-title">Mathematics Lecturer & Researcher</h2>
                         <p className="hero-subtitle">
-                            Advancing mathematical knowledge through research in Graph Theory and dedicated teaching
+                            Motivated mathematician fostering critical thinking and promoting research excellence through innovative teaching methodologies
                         </p>
 
                         <motion.div

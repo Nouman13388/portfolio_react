@@ -5,57 +5,57 @@ import { ExternalLink, GitBranch, Network, Brain, BarChart3, Zap } from 'lucide-
 const Research: React.FC = () => {  const researchProjects = [
     {
       id: 1,
-      title: "Structural Analysis of Planar Graphs",
-      description: "Investigating the fundamental properties of planar graphs and their applications in network topology and circuit design.",
-      category: "Graph Theory",
-      tags: ["Planar Graphs", "Network Topology", "Structural Analysis"],
+      title: "Metric Dimension of Different Chemical Structures",
+      description: "HEC-funded research project investigating the metric dimension properties of various chemical molecular structures and their graph theoretical representations.",
+      category: "Chemical Graph Theory",
+      tags: ["Metric Dimension", "Chemical Structures", "HEC Project"],
       icon: <GitBranch size={24} />,
-      status: "Ongoing"
+      status: "Completed"
     },
     {
       id: 2,
-      title: "Combinatorial Optimization in Regular Graphs",
-      description: "Exploring optimization problems in regular graph structures with applications to communication networks and distributed systems.",
-      category: "Combinatorics",
-      tags: ["Regular Graphs", "Optimization", "Network Design"],
+      title: "Topological Invariant of Subdivided Graphs",
+      description: "Master's thesis research exploring the fundamental properties of topological invariants in subdivided graph structures under the supervision of Dr. Kashif Ali.",
+      category: "Graph Theory",
+      tags: ["Topological Invariants", "Subdivided Graphs", "Master's Thesis"],
       icon: <Network size={24} />,
-      status: "Published"
+      status: "Completed"
     },
     {
       id: 3,
-      title: "Graph Coloring and Chromatic Properties",
-      description: "Developing efficient algorithms for graph coloring problems with focus on large-scale network applications.",
-      category: "Graph Theory",
-      tags: ["Graph Coloring", "Algorithms", "Chromatic Numbers"],
+      title: "Line Graph Analysis of Honeycomb Networks",
+      description: "Published research on metric dimension properties of line graphs derived from honeycomb network structures, contributing to network topology understanding.",
+      category: "Network Theory",
+      tags: ["Line Graphs", "Honeycomb Networks", "Published"],
       icon: <BarChart3 size={24} />,
-      status: "In Review"
+      status: "Published"
     },
     {
       id: 4,
-      title: "Mathematical Modeling for Educational Applications",
-      description: "Creating innovative mathematical models to enhance the teaching and understanding of discrete mathematics concepts.",
+      title: "Innovative Teaching Methodologies in Mathematics",
+      description: "Development of student-centered teaching strategies for calculus, linear algebra, and differential equations to enhance student engagement and performance.",
       category: "Mathematics Education",
-      tags: ["Education", "Mathematical Modeling", "Pedagogy"],
+      tags: ["Teaching Methods", "Student-Centered Learning", "Curriculum Development"],
       icon: <Brain size={24} />,
       status: "Ongoing"
     },
     {
       id: 5,
-      title: "Spectral Properties of Weighted Graph Systems",
-      description: "Analyzing eigenvalue distributions and spectral characteristics of weighted graphs for network analysis applications.",
-      category: "Graph Theory",
-      tags: ["Spectral Analysis", "Weighted Graphs", "Linear Algebra"],
+      title: "Graph Theory Applications in Real-World Problems",
+      description: "Exploring practical applications of graph theoretical concepts in solving contemporary mathematical and computational challenges.",
+      category: "Applied Mathematics",
+      tags: ["Applications", "Real-World Problems", "Graph Theory"],
       icon: <Zap size={24} />,
-      status: "Published"
+      status: "Ongoing"
     },
     {
       id: 6,
-      title: "Discrete Mathematical Structures in Computing",
-      description: "Investigating the role of discrete mathematical structures in modern computational problems and algorithm design.",
-      category: "Applied Mathematics",
-      tags: ["Discrete Mathematics", "Computing", "Algorithm Design"],
+      title: "Mathematical Modeling for Academic Enhancement",
+      description: "Research into mathematical modeling techniques that can be integrated into undergraduate mathematics curriculum for improved learning outcomes.",
+      category: "Educational Research",
+      tags: ["Mathematical Modeling", "Curriculum Design", "Academic Enhancement"],
       icon: <Network size={24} />,
-      status: "Completed"
+      status: "In Development"
     }
   ];
 
