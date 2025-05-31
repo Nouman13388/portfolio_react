@@ -3,27 +3,27 @@ import { motion } from 'framer-motion';
 import { ExternalLink, BookOpen, Award, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {    const socialLinks = [
-        {
-            name: 'Google Scholar',
-            url: 'https://scholar.google.com/citations?user=aqsafarooq',
-            icon: <BookOpen size={20} />,
-            description: 'View publications and citations'
-        },
-        {
-            name: 'ORCID',
-            url: 'https://orcid.org/0000-0002-1234-5678',
-            icon: <Award size={20} />,
-            description: 'Academic profile and research contributions'
-        },
-        {
-            name: 'GitHub',
-            url: 'https://github.com/aqsafarooq',
-            icon: <Github size={20} />,
-            description: 'Code repositories and projects'
-        },
+        // {
+        //     name: 'Google Scholar',
+        //     url: 'https://scholar.google.com/citations?user=aqsafarooq',
+        //     icon: <BookOpen size={20} />,
+        //     description: 'View publications and citations'
+        // },
+        // {
+        //     name: 'ORCID',
+        //     url: 'https://orcid.org/0000-0002-1234-5678',
+        //     icon: <Award size={20} />,
+        //     description: 'Academic profile and research contributions'
+        // },
+        // {
+        //     name: 'GitHub',
+        //     url: 'https://github.com/aqsafarooq',
+        //     icon: <Github size={20} />,
+        //     description: 'Code repositories and projects'
+        // },
         {
             name: 'LinkedIn',
-            url: 'https://linkedin.com/in/aqsafarooq',
+            url: 'https://www.linkedin.com/in/aqsa-farooq-586551120/',
             icon: <Linkedin size={20} />,
             description: 'Professional network and updates'
         },
@@ -135,7 +135,7 @@ const Footer: React.FC = () => {    const socialLinks = [
                 >
                     <div className="footer-bottom-content">
                         <p className="copyright">
-                            © {new Date().getFullYear()} Dr. Alex Carter. All rights reserved.
+                            © {new Date().getFullYear()} Aqsa Farooq. All rights reserved.
                         </p>
                         <button onClick={scrollToTop} className="back-to-top">
                             Back to Top ↑

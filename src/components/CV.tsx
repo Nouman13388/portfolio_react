@@ -1,57 +1,88 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, MapPin, Calendar, Award, GraduationCap, Briefcase, Code } from 'lucide-react';
+import { Download, MapPin, Calendar, Award, GraduationCap, Briefcase, Code, Eye } from 'lucide-react';
 
 const CV: React.FC = () => {    const education = [
         {
             degree: "MS/MPhil in Mathematics",
             institution: "COMSATS University Islamabad",
-            location: "Islamabad, Pakistan",
-            year: "2019-2021",
-            details: "Specialization in Graph Theory and Advanced Mathematical Concepts"
+            location: "Lahore Campus, Pakistan",
+            year: "Completed",
+            details: "Advanced studies in theoretical and applied mathematics with research focus"
         },
         {
-            degree: "Bachelor's in Mathematics",
+            degree: "Bachelor's Degree in Mathematics",
             institution: "COMSATS University Islamabad",
-            location: "Islamabad, Pakistan", 
-            year: "2015-2019",
-            details: "Comprehensive study of Pure and Applied Mathematics"
+            location: "Lahore Campus, Pakistan", 
+            year: "Completed",
+            details: "Comprehensive study of mathematical foundations and applications"
+        },
+        {
+            degree: "Intermediate in Pre-Engineering",
+            institution: "Fazaia Intermediate College Munir Road (PAF)",
+            location: "Lahore Cantt, Pakistan",
+            year: "Completed",
+            details: "Strong foundation in mathematics, physics, and engineering principles"
+        },
+        {
+            degree: "Matriculation in Science",
+            institution: "Fauji Foundation Model School",
+            location: "Lahore Cantt, Pakistan",
+            year: "Completed",
+            details: "Science stream with excellent academic performance"
         }
     ];    const positions = [
         {
-            title: "Mathematics Lecturer",
-            institution: "COMSATS University Islamabad",
-            location: "Islamabad, Pakistan",
-            period: "2021 - Present",
-            details: ["Teaching undergraduate and graduate mathematics courses", "Developing innovative teaching methodologies", "Mentoring students in mathematical research"]
+            title: "Lecturer (Visiting) - Department of Mathematics",
+            institution: "COMSATS University Islamabad, Lahore Campus",
+            location: "Lahore, Pakistan",
+            period: "Sep 2021 - Jan 2025",
+            details: [
+                "Delivered comprehensive lectures in Calculus and Analytical Geometry, Linear Algebra, and Differential Equations",
+                "Utilized student-centered teaching strategies to foster deeper understanding and engagement",
+                "Provided academic mentoring, improving overall class performance and student satisfaction",
+                "Collaborated with faculty to revise and update course content and structure"
+            ]
         },
         {
-            title: "Research Assistant",
-            institution: "COMSATS University Islamabad", 
-            location: "Islamabad, Pakistan",
-            period: "2019 - 2021",
-            details: ["Conducted research in Graph Theory", "Assisted in various mathematical research projects", "Collaborated on academic publications"]
+            title: "Research Assistant - HEC-Funded Project",
+            institution: "COMSATS University Islamabad, Lahore Campus", 
+            location: "Lahore, Pakistan",
+            period: "2018 - 2019",
+            details: [
+                "Contributed to HEC project titled: 'Metric Dimension of Different Chemical Structures'",
+                "Assisted senior faculty in delivering mathematics courses and academic support",
+                "Led problem-solving sessions and evaluated student assignments and exams"
+            ]
+        },
+        {
+            title: "Intern",
+            institution: "Pak Elektron Limited (PEL)",
+            location: "Pakistan",
+            period: "Aug 2016 - Sep 2016",
+            details: ["Gained practical experience in industrial applications of mathematics and engineering principles"]
         }
     ];    const awards = [
         {
-            title: "Academic Excellence Scholarship",
-            year: "2020",
-            description: "Awarded for outstanding performance in graduate studies"
+            title: "Appreciation Certificate",
+            year: "2017",
+            description: "World Book & Copyright Day recognition for academic contributions"
         },
         {
-            title: "Dean's List Recognition", 
+            title: "Conference Organizer", 
             year: "2019",
-            organization: "COMSATS University Islamabad"
+            organization: "2nd International Conference on Recent Advances in Applied Mathematics"
         },
         {
-            title: "Best Research Presentation",
-            year: "2021",
-            organization: "Mathematics Department Symposium"
+            title: "Workshop Organizer",
+            year: "2016",
+            organization: "Thematic Workshop on Algebra and Number Theory"
         },
         {
-            title: "Mathematics Achievement Award",
-            year: "2018",
-            organization: "COMSATS University Islamabad"
+            title: "Academic Excellence",
+            year: "Multiple Years",
+            organization: "COMSATS University Islamabad",
+            description: "Consistent high performance throughout academic career"
         }
     ];
 
@@ -68,11 +99,19 @@ const CV: React.FC = () => {    const education = [
             category: "Teaching & Communication",
             items: ["Curriculum Development", "Academic Writing", "Research Methodology", "Student Mentoring"]
         }
-    ];
+    ];    const handleDownloadCV = () => {
+        // Create a download link for the CV PDF
+        const link = document.createElement('a');
+        link.href = '/Aqsa_Farooq_CV.pdf';
+        link.download = 'Aqsa_Farooq_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
-    const handleDownloadCV = () => {
-        // In a real application, this would download an actual CV file
-        alert('Full CV download functionality would be implemented here');
+    const handlePreviewCV = () => {
+        // Open CV in new tab for preview
+        window.open('/Aqsa_Farooq_CV.pdf', '_blank');
     };
 
     return (
@@ -86,19 +125,23 @@ const CV: React.FC = () => {    const education = [
                     viewport={{ once: true }}
                 >
                     Curriculum Vitae
-                </motion.h2>
-
-                <motion.div
+                </motion.h2>                <motion.div
                     className="download-section"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     viewport={{ once: true }}
                 >
-                    <button className="btn-primary download-btn" onClick={handleDownloadCV}>
-                        <Download size={20} />
-                        Download Full CV
-                    </button>
+                    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <button className="btn-secondary download-btn" onClick={handlePreviewCV}>
+                            <Eye size={20} />
+                            Preview CV
+                        </button>
+                        <button className="btn-primary download-btn" onClick={handleDownloadCV}>
+                            <Download size={20} />
+                            Download CV
+                        </button>
+                    </div>
                 </motion.div>
 
                 <div className="cv-content">
